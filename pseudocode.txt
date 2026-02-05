@@ -1,0 +1,6 @@
+1.start the game by having  a player  moving in raw right and left
+2.ball that the player shoot goes forward
+3. Goal box that moves in a raw
+4.game box that divided in raws and columns
+5.loops that keep the games running
+6.event that run the ball
