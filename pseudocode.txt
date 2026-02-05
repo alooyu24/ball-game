@@ -1,6 +1,7 @@
-1.start the game by having  a player  moving in raw right and left
-2.ball that the player shoot goes forward
-3. Goal box that moves in a raw
-4.game box that divided in raws and columns
-5.loops that keep the games running
-6.event that run the ball
+1.The game runs inside a game board with fixed boundaries, divided into raws and columns
+2.A player exists at a position inside the board and can move right and left only
+3.The game take the keyboard input to move right and left the player can trigger inter to  shoot the ball
+4.When shooting, a ball is created at the player’s position and moves forward automatically
+5.An goal exists in the board and moves right and left automatically, changing direction at edges
+6.A game loop keeps the game running by checking input, updating positions, and handling collisions
+7.HTML / DOM only displays the current game state and does not control logic
