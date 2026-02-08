@@ -23,3 +23,8 @@ h1 {
   background-color: red;
   border-radius: 50%;
 }
+
+.goal {
+  background-color: gold;
+  border-radius: 20px;
+}
