@@ -1,7 +1,25 @@
 body {
   background-color: aqua;
 }
+h1 {
+  text-align: center;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(7, 60px);
+  grid-template-rows: repeat(10, 60px);
+  background-color: white;
+  gap: 4px;
+  margin: 20px auto;
+  width: fit-content;
+}
 
-section {
-  display: flex;
+.cell {
+  background-color: black;
+  border: 1px solid #999;
+}
+
+.ball {
+  background-color: red;
+  border-radius: 50%;
 }
