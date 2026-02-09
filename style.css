@@ -1,30 +1,131 @@
+/* ---------- Global ---------- */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: aqua;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
 }
-h1 {
-  text-align: center;
+
+/* ---------- Title ---------- */
+.game-title {
+  padding: 16px 32px;
+
+  border-radius: 20px;
 }
+
+.game-title span {
+  font-size: 36px;
+  font-weight: 800;
+  color: cyan;
+}
+
+.game-title span {
+  background: linear-gradient(90deg, #4facfe, #00f2fe, #43e97b);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleGradient 4s linear infinite;
+}
+
+@keyframes titleGradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.game-title.running span {
+  background: none;
+  -webkit-text-fill-color: red;
+}
+
+/* ---------- HUD (Score) ---------- */
+.score {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Board ---------- */
 .board {
+  margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(7, 60px);
-  grid-template-rows: repeat(10, 60px);
-  background-color: white;
-  gap: 4px;
-  margin: 20px auto;
-  width: fit-content;
+  grid-template-columns: repeat(7, 64px);
+  grid-template-rows: repeat(10, 64px);
+  gap: 8px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
+/* ---------- Cells ---------- */
 .cell {
-  background-color: black;
-  border: 1px solid #999;
+  background: #0b0f14;
+  border-radius: 0; /* IMPORTANT */
+  box-shadow: none; /* IMPORTANT */
 }
 
+/* ---------- Ball ---------- */
 .ball {
-  background-color: red;
+  background: #e63946;
   border-radius: 50%;
 }
 
+/* ---------- Goal ---------- */
 .goal {
-  background-color: gold;
-  border-radius: 20px;
+  background: #ffd166;
+  border-radius: 12px;
+}
+
+/* ---------- Reset Button ---------- */
+button {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
 }
