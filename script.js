@@ -5,6 +5,14 @@ const columns = 7
 let ball
 let goal
 
+const messageEl = document.querySelector(".message")
+
+const showMessage = (text) => {
+  messageEl.textContent = text
+
+  console.log(messageEl.textContent)
+}
+
 for (let i = 0; i < rows * columns; i++) {
   const cell = document.createElement("div")
   cell.classList.add("cell")
@@ -20,6 +28,9 @@ let isShooting = false
 cells[ballIndex].classList.add("ball")
 
 const handleKeyPress = (event) => {
+  if (isShooting && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
+    return
+  }
   if (event.key === "ArrowLeft") {
     moveBallLeft()
   } else if (event.key === "ArrowRight") {
@@ -32,6 +43,7 @@ const handleKeyPress = (event) => {
 const shootBall = () => {
   if (isShooting) return
   isShooting = true
+  showMessage("")
 
   shootInterval = setInterval(() => {
     moveBallUp()
@@ -46,6 +58,7 @@ const moveBallUp = () => {
   if (ballRow < 0) {
     stopShooting()
     resetBall()
+    showMessage("Missed! Try again")
     return
   }
   ballIndex = ballRow * columns + ballColl
@@ -65,6 +78,7 @@ const stopShooting = () => {
 const resetBall = () => {
   ballRow = rows - 1
   ballColl = Math.floor(columns / 2)
+  ballIndex = ballRow * columns + ballColl
 
   cells[ballIndex].classList.add("ball")
 }
@@ -75,6 +89,7 @@ const handleGoalHit = () => {
 
   score += 10
   updateScore()
+  showMessage("Hit! you scored!" + "current" + score)
 
   resetBall()
   startGoalMovement(500)
