@@ -6,7 +6,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #37473a, #1c4c69, #0e3938);
   font-family:
     "Inter",
     system-ui,
@@ -33,7 +33,7 @@ body {
 }
 
 .game-title span {
-  background: linear-gradient(90deg, #4facfe, #00f2fe, #43e97b);
+  background: linear-gradient(90deg, #dae0e7, #cbdedf, #43e97b);
   background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -65,7 +65,7 @@ body {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
 }
 
 /* ---------- Board ---------- */
@@ -76,29 +76,35 @@ body {
   grid-template-rows: repeat(10, 64px);
   gap: 8px;
   padding: 14px;
-  background: rgba(255, 255, 255, 0.08);
+  background-image: url("https://img.freepik.com/free-photo/3d-hyperspace-background-with-warp-tunnel-effect_1048-12526.jpg?semt=ais_hybrid&w=740&q=80");
+  background-repeat: repeat;
   backdrop-filter: blur(12px);
   border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 20px 40px rgba(254, 245, 245, 0.45);
 }
 
 /* ---------- Cells ---------- */
 .cell {
-  background: #0b0f14;
   border-radius: 0; /* IMPORTANT */
   box-shadow: none; /* IMPORTANT */
 }
 
 /* ---------- Ball ---------- */
 .ball {
-  background: #e63946;
+  background-image: url("./imges/pngaaa.com-2888019.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 50%;
 }
 
 /* ---------- Goal ---------- */
 .goal {
-  background: #ffd166;
-  border-radius: 12px;
+  background-image: url("./imges/plantStarWare.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 80px;
 }
 
 /* ---------- Reset Button ---------- */

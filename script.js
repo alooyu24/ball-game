@@ -28,9 +28,6 @@ let isShooting = false
 cells[ballIndex].classList.add("ball")
 
 const handleKeyPress = (event) => {
-  if (isShooting && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
-    return
-  }
   if (event.key === "ArrowLeft") {
     moveBallLeft()
   } else if (event.key === "ArrowRight") {
@@ -92,7 +89,7 @@ const handleGoalHit = () => {
   showMessage("Hit! you scored!" + "current" + score)
 
   resetBall()
-  startGoalMovement(500)
+  startGoalMovement(100)
 }
 const moveBallLeft = () => {
   if (ballColl === 0) return
@@ -155,7 +152,7 @@ const stopGoalMovement = () => {
   goalInterval = null
 }
 
-startGoalMovement(500)
+startGoalMovement(100)
 
 let score = 0
 const scoreEl = document.querySelector(".score")
