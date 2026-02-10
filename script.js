@@ -152,8 +152,6 @@ const stopGoalMovement = () => {
   goalInterval = null
 }
 
-startGoalMovement(100)
-
 let score = 0
 const scoreEl = document.querySelector(".score")
 
@@ -162,3 +160,32 @@ const updateScore = () => {
 }
 
 updateScore()
+
+const resetButton = document.querySelector("button")
+
+const resetGame = () => {
+  stopGoalMovement()
+  stopShooting()
+
+  cells[ballIndex].classList.remove("ball")
+  cells[goalIndex].classList.remove("goal")
+
+  ballRow = rows - 1
+  ballColl = Math.floor(columns / 2)
+  ballIndex = ballRow * columns + ballColl
+  cells[ballIndex].classList.add("ball")
+
+  goalCol = Math.floor(columns / 2)
+  goalIndex = goalRow * columns + ballColl
+  goalDirection = 1
+  cells[goalIndex].classList.add("goal")
+  startGoalMovement(100)
+
+  score = 0
+  updateScore()
+  showMessage("")
+}
+
+resetButton.addEventListener("click", resetGame)
+
+startGoalMovement(100)
