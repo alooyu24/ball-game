@@ -182,7 +182,7 @@ const resetGame = () => {
   cells[ballIndex].classList.add("ball")
 
   goalCol = Math.floor(columns / 2)
-  goalIndex = goalRow * columns + ballColl
+  goalIndex = goalRow * columns + goalCol
   goalDirection = 1
   cells[goalIndex].classList.add("goal")
   startGoalMovement(90)
