@@ -11,8 +11,7 @@
 ---
 
 ## Description
-Star Wars is a Grid Shooter Game is a simple 2D browser-based game built using **HTML, CSS, and JavaScript**.
-The project focuses on learning web development and basic game logic concepts such as movement, shooting, and collision detection.
+Star Wares is a grid-based 2D browser game where the player controls a spaceship and attempts to hit a moving planet at the top of the board. The game is built using HTML, CSS, and JavaScript.
 
 ---
 
@@ -23,7 +22,7 @@ The project focuses on learning web development and basic game logic concepts su
 - 🚀 Shoot → `Arrow Up`
 -  Hit the moving ship to score points
 -  Reach **100 points** to win the game
--
+
 
 ## Game Logic Overview
 
@@ -33,7 +32,33 @@ The project focuses on learning web development and basic game logic concepts su
 - Shooting uses `setInterval` to animate upward movement
 - Collision is detected using index comparison
 
+
+
+
+ ## Features
+
+- Dynamic grid generation
+- Real-time keyboard controls
+- Moving animated goal
+- Shooting system
+- Score tracking
+- Win condition
+- Reset functionality
+- Custom spaceship & planet images
+- Animated title
+
+
+
+## future Improvements
+- Add sound effects
+- Add multiple levels
+- Add player name storage
+
+
 ## tools
 - **HTML** - Structure of the game
 - **CSS** - Layout of the game
- - **JAVASCRIPT** - game logic and interactions
+- **JAVASCRIPT** - game logic and interactions
+
+
+**Enjoy the game! 🚀**
