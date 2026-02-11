@@ -28,6 +28,7 @@ let isShooting = false
 cells[ballIndex].classList.add("ball")
 
 const handleKeyPress = (event) => {
+  if (score >= 100) return
   if (event.key === "ArrowLeft") {
     moveBallLeft()
   } else if (event.key === "ArrowRight") {
@@ -86,6 +87,11 @@ const handleGoalHit = () => {
 
   score += 10
   updateScore()
+  if (score >= 100) {
+    stopGoalMovement()
+    showMessage("YOU WIN THE GAME 🏆")
+    return
+  }
   showMessage("Hit! you scored!" + "current" + score)
 
   resetBall()
