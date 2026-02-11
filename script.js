@@ -89,7 +89,7 @@ const handleGoalHit = () => {
   showMessage("Hit! you scored!" + "current" + score)
 
   resetBall()
-  startGoalMovement(100)
+  startGoalMovement(90)
 }
 const moveBallLeft = () => {
   if (ballColl === 0) return
@@ -179,7 +179,7 @@ const resetGame = () => {
   goalIndex = goalRow * columns + ballColl
   goalDirection = 1
   cells[goalIndex].classList.add("goal")
-  startGoalMovement(100)
+  startGoalMovement(90)
 
   score = 0
   updateScore()
@@ -188,4 +188,4 @@ const resetGame = () => {
 
 resetButton.addEventListener("click", resetGame)
 
-startGoalMovement(100)
+startGoalMovement(90)
