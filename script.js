@@ -83,7 +83,6 @@ const resetBall = () => {
 
 const handleGoalHit = () => {
   stopShooting()
-  stopGoalMovement()
 
   score += 10
   updateScore()

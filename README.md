@@ -1,4 +1,4 @@
-# 🎮 Ball-Game
+# STARE WARS 🎮
 
 ## Prepared By
 **Ali Hasan Salman**
@@ -6,20 +6,32 @@
 #### Links
 - [GitHub](https://github.com/alooyu24)
 - [LinkedIn](https://www.linkedin.com/in/ali-hasan-8b996a355)
+- [surge](https://alooyu24.surge.sh/index.html)
 
 ---
 
 ## Description
-Ball Game is a Grid Shooter Game is a simple 2D browser-based game built using **HTML, CSS, and JavaScript**.
+Star Wars is a Grid Shooter Game is a simple 2D browser-based game built using **HTML, CSS, and JavaScript**.
 The project focuses on learning web development and basic game logic concepts such as movement, shooting, and collision detection.
 
 ---
 
-## objective and Gameplay
-- Control a player character inside a grid-based board
-- Move the player Right and left
-- Shoot ball toward an goal
-- Hit the goal to complete the level
+## How To Play 🎮
+
+- ⬅️ Move Left → `Arrow Left`
+- ➡️ Move Right → `Arrow Right`
+- 🚀 Shoot → `Arrow Up`
+-  Hit the moving goal to score points
+-  Reach **100 points** to win the game
+-
+
+## Game Logic Overview
+
+- The board is built dynamically using **CSS Grid**
+- The player starts at the bottom center
+- The goal moves automatically left and right
+- Shooting uses `setInterval` to animate upward movement
+- Collision is detected using index comparison:
 
 ## tools
 - **HTML** - Structure of the game
