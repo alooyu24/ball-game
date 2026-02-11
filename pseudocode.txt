@@ -1,15 +1,15 @@
-When the game starts the player appears in the grid at the bottom center and can move inside the game board right and left with fixed boundaries.
+1.When the game starts the player appears in the grid at the bottom center and can move inside the game board right and left with fixed boundaries.
 
-The game takes keyboard input to move right and left and the player can press the up arrow to shoot and move upward to try to hit the goal.
+2.The game takes keyboard input to move right and left and the player can press the up arrow to shoot and move upward to try to hit the goal.
 
-When shooting, the spaceship moves from the player’s position and goes upward automatically until it hits the goal or reaches the top of the board.
+3.When shooting, the spaceship moves from the player’s position and goes upward automatically until it hits the goal or reaches the top of the board.
 
-The spaceship can still move right and left while moving upward.
+4.The spaceship can still move right and left while moving upward.
 
-A goal exists in the board and moves right and left automatically, changing direction when it reaches the edge of the board.
+5.A goal exists in the board and moves right and left automatically, changing direction when it reaches the edge of the board.
 
-The score increases when the spaceship hits the goal and when the score reaches 100 the game shows a win screen.
+6.The score increases when the spaceship hits the goal and when the score reaches 100 the game shows a win screen.
 
-If the spaceship reaches the top without hitting the goal, it resets back to the starting position because he loss.
+7.If the spaceship reaches the top without hitting the goal, it resets back to the starting position because he loss.
 
-A game loop keeps the game running by checking input, updating positions, and handling collisions.
+8.A game loop keeps the game running by checking input, updating positions, and handling collisions.
